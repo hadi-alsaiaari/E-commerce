@@ -25,4 +25,7 @@ return [
     'logout'           => 'Logout',
     'name'             => 'Name',
     'not_match'        => 'Credentials Do Not Match',
+    'valid_password' => 'Please enter valid passwords',
+    'valid_email' => 'Please enter valid email',
+
 ];

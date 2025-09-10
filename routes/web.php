@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
+Route::fallback(function () {
+    return response()->view('errors.404');
+});
+
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
