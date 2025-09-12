@@ -1,9 +1,19 @@
 <?php
 
 return [
+    'active' => 'مفعل',
+    'inactive' => 'غير مفعل',
+    'has_variants' => 'لديه متغيرات',
+    'yes_variants' => 'نعم، لديه متغيرات',
+    'no_variants' => 'لا، ليس لديه متغيرات',
+    'pending' => 'قيد الإنتظار',
+    'paid' => 'مدفوع',
+    'cancelled' => 'ملغي',
+    'delivered' => 'تم التوصيل ',
+
     'app_name' => 'معدات ثقيلة',
     'username' => 'اسم المستخدم',
-    'location'=>'احداثيات الموقع',
+    'location' => 'احداثيات الموقع',
 
     'products' => 'المنتجات',
     'categories' => 'الفئات',
@@ -115,23 +125,23 @@ return [
     'quality_policy_tr' => 'سياسة الجودة بالتركية',
     'catalog' => 'الكتالوج',
     'remember_me' => 'تذكرني',
-    'contact_us'=>'تواصل معنا',
-    'all'=>'الجميع',
+    'contact_us' => 'تواصل معنا',
+    'all' => 'الجميع',
 
-    'online_support'=>'الدعم  عبر الانترنت',
-    'solve_problems'=>' سرعه حل المشاكل',
-    'quiq_contact'=>'التواصل بسرعه فائقه',
-    'sliders'=>'الصور الافتتاحيه',
-    'who_are_we'=>'من نحن؟',
-    'links'=>'الروابط',
-    'sections'=>'اللوائات',
-    'fullscreen'=>'عرض كامل',
-    'about_us_image'=>'صوره من نحن',
-    'description'=>'الوصف',
-    'description_ar'=>'الوصف بالعربيه',
-    'description_en'=>'الوصف بالانجليزيه',
-    'select_category'=>'حدد الفئه',
-    'back'=>'العوده'
+    'online_support' => 'الدعم  عبر الانترنت',
+    'solve_problems' => ' سرعه حل المشاكل',
+    'quiq_contact' => 'التواصل بسرعه فائقه',
+    'sliders' => 'الصور الافتتاحيه',
+    'who_are_we' => 'من نحن؟',
+    'links' => 'الروابط',
+    'sections' => 'اللوائات',
+    'fullscreen' => 'عرض كامل',
+    'about_us_image' => 'صوره من نحن',
+    'description' => 'الوصف',
+    'description_ar' => 'الوصف بالعربيه',
+    'description_en' => 'الوصف بالانجليزيه',
+    'select_category' => 'حدد الفئه',
+    'back' => 'العوده'
 
 
 

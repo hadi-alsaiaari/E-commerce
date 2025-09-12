@@ -21,6 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'country_id',
+        'governorate_id',
+        'city_id',
+        'is_active',
+        'phone',
     ];
 
     /**
@@ -44,5 +49,40 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id');
+    }
+
+    public function  governorate()
+    {
+        return $this->belongsTo(Governorate::class, 'governorate_id');
+    }
+
+    public function  city()
+    {
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(ProductPreview::class, 'user_id');
+    }
+
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class, 'user_id');
+    }
+
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class, 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class , 'user_id');
     }
 }
