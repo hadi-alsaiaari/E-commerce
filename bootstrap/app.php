@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 
 return Application::configure(basePath: dirname(__DIR__))
@@ -15,6 +16,14 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->redirectGuestsTo(function(){
+            return (request()->is('*/dashboard') || request()->is('*/dashboard/*')) ? route('dashboard.login') : route('login');
+        });
+        
+        $middleware->redirectUsersTo(function(){
+            return auth('admin')->check() ? route('dashboard.index') : route('index');
+        });
+
         $middleware->alias([
             /**** OTHER MIDDLEWARE ALIASES ****/
             'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,

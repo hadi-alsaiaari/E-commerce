@@ -14,3 +14,5 @@
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="{{ asset('assets/dashboard') }}/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
+
+{{-- {!! NoCaptcha::renderJs(Config::get('app.locale')) !!} --}}

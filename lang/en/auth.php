@@ -27,5 +27,10 @@ return [
     'not_match'        => 'Credentials Do Not Match',
     'valid_password' => 'Please enter valid passwords',
     'valid_email' => 'Please enter valid email',
-
+    'reset_success' => 'Your Password Updated Successfully',
+    'invalid_code' => 'Code is invalid',
+    'send' => 'Send',
+    'reset' => 'Reset',
+    'password_confirmation' => 'Password Confirmation',
+    'code' => 'Code',
 ];

@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.auth.auth')
 
-@section('title', __('auth.login'))
+@section('title', __('auth.reset'))
 
 @section('content')
     <div class="app-content content">
@@ -29,10 +29,10 @@
                                             </div>
                                         @endif
                                         <form class="form-horizontal" method="POST"
-                                            action="{{ route('dashboard.login') }}">
+                                            action="{{ route('dashboard.password.reset') }}">
                                             @csrf
-                                            <fieldset class="form-group position-relative has-icon-left">
-                                                <input name="email" type="email" class="form-control input-lg"
+                                            <fieldset hidden class="form-group position-relative has-icon-left">
+                                                <input hidden name="email" value="{{$email}}" type="email" class="form-control input-lg"
                                                     id="user-name" placeholder="{{ __('words.username') }}" tabindex="1"
                                                     required
                                                     data-validation-required-message="{{ __('auth.valid_email') }}">
@@ -45,40 +45,55 @@
                                                 <div class="help-block font-small-3"></div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <input name="password" type="password" class="form-control input-lg"
-                                                    id="password" placeholder="{{ __('words.password') }}" tabindex="2"
+                                                <input name="code" type="text" class="form-control input-lg"
+                                                    id="code" placeholder="{{ __('auth.code') }}" tabindex="2"
                                                     required
-                                                    data-validation-required-message="{{ __('auth.valid_password') }}">
+                                                    data-validation-required-message="{{ __('auth.invalid_code') }}">
+                                                @error('code')
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
                                                 <div class="form-control-position">
                                                     <i class="la la-key"></i>
                                                 </div>
                                                 <div class="help-block font-small-3"></div>
                                             </fieldset>
-                                            {{-- <fieldset class="form-group position-relative has-icon-left">
-                                                <div style="display: flex; justify-content: center;">
-                                                    {!! NoCaptcha::display() !!}
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input name="password" type="password" class="form-control input-lg"
+                                                    id="password" placeholder="{{ __('words.password') }}" tabindex="3"
+                                                    required
+                                                    data-validation-required-message="{{ __('auth.valid_password') }}">
+                                                @error('password')
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                                <div class="form-control-position">
+                                                    <i class="la la-key"></i>
                                                 </div>
-                                                @if ($errors->has('g-recaptcha-response'))
-                                                    <span class="help-block">
-                                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </fieldset> --}}
+                                                <div class="help-block font-small-3"></div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input name="password_confirmation" type="password"
+                                                    class="form-control input-lg" id="password_confirmation"
+                                                    placeholder="{{ __('auth.password_confirmation') }}" tabindex="4"
+                                                    required
+                                                    data-validation-required-message="{{ __('auth.password_confirmation') }}">
+                                                @error('password_confirmation')
+                                                    <strong class="text-danger">{{ $message }}</strong>
+                                                @enderror
+                                                <div class="form-control-position">
+                                                    <i class="la la-key"></i>
+                                                </div>
+                                                <div class="help-block font-small-3"></div>
+                                            </fieldset>
                                             <div class="form-group row">
                                                 <div class="col-md-6 col-12 text-center text-md-left">
-                                                    <fieldset>
-                                                        <input name="remember" type="checkbox" id="remember-me"
-                                                            class="chk-remember">
-                                                        <label for="remember-me">{{ __('auth.remember_me') }}</label>
-                                                    </fieldset>
                                                 </div>
                                                 <div class="col-md-6 col-12 text-center text-md-right">
-                                                    <a href="{{ route('dashboard.password.email') }}"
-                                                        class="card-link">{{ __('auth.forget_password') }}</a>
+                                                    <a href="{{ route('dashboard.login') }}"
+                                                        class="card-link">{{ __('auth.login') }}</a>
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-danger btn-block btn-lg">
-                                                <i class="ft-unlock"></i> {{ __('auth.login') }}
+                                                <i class="ft-unlock"></i> {{ __('auth.reset') }}
                                             </button>
                                         </form>
                                     </div>
