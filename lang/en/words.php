@@ -1,6 +1,32 @@
 <?php
 
 return [
+    'roles'=>'Roles',
+    'create_role'=>'Create Role',
+    'edit_role'=>'Update Role',
+    'delete_role'=>'Delete Role',
+    'role_name'=>'Role Name',
+    'role_description'=>'Role Description',
+    'role_permissions'=>'Role Permissions',
+    'role'=>'Role',
+    'permissions'=>'Permissions',
+    'operations'=>'Operations',
+    'role_en'=>'Role Name In English',
+    'role_ar'=>'Role Name In Arbic',
+    'success_msg'=>'Operation Done Successfuly',
+    'error_msg'=>'Operation Failed',
+    'cancel' =>'Cancel',
+    'save' =>'Save',
+    'edit' =>'Edit',
+    'delete' =>'Delete',
+    'add' =>'Add',
+    'sure_delete' => 'Are you sure to delete this selected element?',
+    'no_data' => 'No Data',
+    'all_permissions' => 'Has All Permissions',
+    'select_all_permissions' => 'Select All Permissions',
+
+
+    
     'active' => 'Active',
     'inactive' => 'Inactive',
     'has_variants' => 'Has Variants',

@@ -1,6 +1,31 @@
 <?php
 
 return [
+    'roles'=>'الوظائف',
+    'create_role'=>'انشاء الوظيفة',
+    'edit_role'=>'تعديل الوظيفة',
+    'delete_role'=>'حذف الوظيفة',
+    'role_name'=>'اسم الوظيفة',
+    'role_description'=>'وصف الوظيفة',
+    'role_permissions'=>'صلاحيات الوظيفة',
+    'role'=>'الوظيفة',
+    'permissions'=>'الصلاحيات',
+    'operations'=>'العمليات',
+    'role_en'=>'اسم الوظيفة بالإنجليزي',
+    'role_ar'=>'اسم الوظيفة بالعربي',
+    'success_msg'=>'تمت العملية بنجاح',
+    'error_msg'=>'فشلت العمليه ',
+    'cancel' =>'إلغاء',
+    'save' =>'حفظ',
+    'edit' =>'تعديل',
+    'delete' =>'حذف',
+    'add' =>'اضافة',
+    'add' =>'اضافة',
+    'sure_delete' => 'هل أنت متأكد من أنك تريد حذف العنصر المختار؟',
+    'all_permissions' => 'لديه كل الصلاحيات',
+    'select_all_permissions' => 'اختيار جميع الصلاحيات',
+
+
     'active' => 'مفعل',
     'inactive' => 'غير مفعل',
     'has_variants' => 'لديه متغيرات',

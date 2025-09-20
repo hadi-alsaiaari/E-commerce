@@ -52,4 +52,13 @@ class Admin extends Authenticatable
     {
         return $this->belongsTo(Role::class, 'role_id');
     }
+
+    public function hasPermission($target_permission)
+    {
+        $role = $this->role;
+        if (!$role)
+            return false;
+
+        return $role->permissions & (int)$target_permission;
+    }
 }

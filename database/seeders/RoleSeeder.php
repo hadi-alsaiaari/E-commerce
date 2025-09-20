@@ -19,7 +19,7 @@ class RoleSeeder extends Seeder
                 'ar' => 'مدير',
                 'en' => 'Manger',
             ],
-            'permession' => ['a', 'b', 'c'],
+            'permissions' => -1,
         ]);
     }
 }

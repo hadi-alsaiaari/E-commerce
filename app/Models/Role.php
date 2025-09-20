@@ -11,14 +11,7 @@ class Role extends Model
 
     public $translatable = ['role'];
 
-    protected $fillable = ['role', 'permession'];
-
-    protected function casts(): array
-    {
-        return [
-            'permession' => 'array',
-        ];
-    }
+    protected $fillable = ['role', 'permissions'];
 
     public function admins()
     {

@@ -196,6 +196,12 @@ return [
     */
 
     'attributes' => [
+        'role.en'=>'Role Name With English',
+        'role.ar'=>'Role Name With Arbic',
+        'name.en'=>'Name With English',
+        'name.ar'=>'Name With Arbic',
+        'value.*.ar'=>'Value With Arbic',
+        'value.*.en'=>'Value With English',
         'name'                  => 'Name',
         'username'              => 'Username',
         'email'                 => 'Email',
