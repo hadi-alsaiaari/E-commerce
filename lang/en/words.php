@@ -24,9 +24,23 @@ return [
     'no_data' => 'No Data',
     'all_permissions' => 'Has All Permissions',
     'select_all_permissions' => 'Select All Permissions',
+    'admins' => 'Admins',
+    'create_admin'=>'Create Admin',
+    'edit_admin'=>'Update Admin',
+    'delete_admin'=>'Delete Admin',
+    'change_status' => 'Change Status',
+    'activation' => 'Activation',
+    'suspension' => 'Suspension',
+    'select_status' => 'Select Status',
+    'select_role' => 'Select Role',
+    'status' => 'Status',
 
 
-    
+
+
+
+
+
     'active' => 'Active',
     'inactive' => 'Inactive',
     'has_variants' => 'Has Variants',
@@ -84,6 +98,7 @@ return [
 
     // profile
     'password' => 'Password',
+    'password_confirmation' => 'Password Confirmation',
     'profile' => 'Profile',
     'edit_profile' => 'Edit Profile',
     'hello' => 'Hello',

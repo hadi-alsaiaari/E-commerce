@@ -15,9 +15,14 @@ class RoleService
         $this->role_repository = $role_repository;
     }
 
-    public function getRolesPagination(int $limit)
+    public function getRolesPagination(int $limit = 5)
     {
         return $this->role_repository->getRolesPagination($limit);
+    }
+
+    public function getAllRoles()
+    {
+        return $this->role_repository->getAllRoles();
     }
 
     public function createRole($validated_data)

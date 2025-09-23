@@ -61,4 +61,9 @@ class Admin extends Authenticatable
 
         return $role->permissions & (int)$target_permission;
     }
+
+    public function getStatus()
+    {
+        return $this->status == 1 ? __('words.active') : __('words.inactive');
+    }
 }
