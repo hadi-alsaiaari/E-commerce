@@ -6,9 +6,14 @@ use App\Models\Role;
 
 class RoleRepository
 {
-    public function getRolesPagination(int $limit)
+    public function getRolesPagination(int $limit = 5)
     {
         return Role::paginate($limit);
+    }
+
+    public function getAllRoles()
+    {
+        return Role::get();
     }
 
     public function createRole($validated_data)

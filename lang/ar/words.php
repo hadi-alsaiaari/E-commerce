@@ -24,6 +24,21 @@ return [
     'sure_delete' => 'هل أنت متأكد من أنك تريد حذف العنصر المختار؟',
     'all_permissions' => 'لديه كل الصلاحيات',
     'select_all_permissions' => 'اختيار جميع الصلاحيات',
+    'admins' => 'المسؤولين',
+    'create_admin'=>'انشاء مسؤول',
+    'edit_admin'=>'تعديل مسؤول',
+    'delete_admin'=>'حذف مسؤول',
+    'change_status' => 'تغيير الحالة',
+    'activation' => 'تنشيط',
+    'suspension' => 'تعليق',
+    'select_status' => 'اختر الحالة',
+    'select_role' => 'اختر الوظيفة',
+    'status' => 'الحالة',
+
+
+
+
+
 
 
     'active' => 'مفعل',
@@ -82,6 +97,7 @@ return [
 
     // profile
     'password' => 'كلمة المرور',
+    'password_confirmation' => 'تأكيد كلمة المرور',
     'profile' => 'الملف الشخصي',
     'edit_profile' => 'تعديل الملف الشخصي',
     'hello' => 'مرحبًا',
